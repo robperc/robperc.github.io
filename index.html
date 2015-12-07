@@ -17,8 +17,6 @@
 <body>
 	Hello, world
 	<script src="#">
-		var term = new Terminal( {handler: termHandler} );
-		term.open();
 
 		function termHandler() {
 			var line = this.lineBuffer;
@@ -51,7 +49,7 @@
     		rows: 24
   		}
 
-  		var term = new Term(conf);
+  		var term = new Term(conf, {handler: termHandler});
   		term.open();
 	</script>
 </body>
