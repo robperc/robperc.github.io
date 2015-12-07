@@ -8,8 +8,8 @@
 	<meta name="author" content="Rob Percival">
 
 	<link rel="stylesheet" href="vendors/termlib/term_styles.css">
-	<script src="vendors/termlib/termlib.js"></script>
-	<script src="#">
+	<script type="text/javascript" src="vendors/termlib/termlib.js"></script>
+	<script type="text/javascript">
 		function termHandler() {
 			var line = this.lineBuffer;
 			this.newLine();
@@ -41,7 +41,7 @@
     		rows: 24,
   		}
 
-  		function termOpener() {
+  		function openTerm() {
   			term = new Terminal(conf);
        		term.open();
   		}
@@ -53,7 +53,7 @@
 	<![endif]-->
 </head>
 <body>
-	Hello, world
-	<div onload="termOpener();"></div>
+	<a href="javascript:openTerm()">open Terminal</a>
+	<div id="termDiv"></div>
 </body>
 </html>
