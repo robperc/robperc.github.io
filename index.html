@@ -46,10 +46,11 @@
     		x: 100,
     		y: 100,
     		cols: 80,
-    		rows: 24
+    		rows: 24,
+    		handler: termHandler
   		}
 
-  		var term = new Term(conf, {handler: termHandler});
+  		var term = new Terminal(conf);
   		term.open();
 	</script>
 </body>
